@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class GeolocationIpProcessor implements ItemProcessor<GeolocationIpDTO, GeolocationIp> {
-   
 	@Override
 	public GeolocationIp process(GeolocationIpDTO geolocationIpDTO) throws Exception {
       GeolocationIp geolocationIp = new GeolocationIp();

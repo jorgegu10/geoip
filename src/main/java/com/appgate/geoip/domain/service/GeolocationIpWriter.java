@@ -22,6 +22,6 @@ public class GeolocationIpWriter implements ItemWriter<GeolocationIp> {
 
    public void write(List<? extends GeolocationIp> geolocationIps) throws Exception {
       this.iGeolocationIp.saveAll(geolocationIps);
-      logger.info("{} Geolocations Ips saved in database" + geolocationIps.size());
+      logger.info("{} Geolocations Ips guardados en base de datos: " + geolocationIps.size());
    }
 }
