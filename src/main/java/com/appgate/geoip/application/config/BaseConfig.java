@@ -8,6 +8,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 
+/**
+ * Configuración de JobLuncher y JobRepository
+ * 
+ * @author jorge.gutierrez
+ *
+ */
 @Configuration
 @EnableAsync
 public class BaseConfig {

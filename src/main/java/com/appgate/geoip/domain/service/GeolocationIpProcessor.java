@@ -6,6 +6,11 @@ import com.appgate.geoip.domain.model.IpId;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
+/**
+ * Componente GeolocationIpProcessor
+ * 
+ * @author jorge.gutierrez
+ */
 @Component
 public class GeolocationIpProcessor implements ItemProcessor<GeolocationIpDTO, GeolocationIp> {
    

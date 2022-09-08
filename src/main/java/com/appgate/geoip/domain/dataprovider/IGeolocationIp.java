@@ -8,6 +8,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Interfaz IGeolocationIp
+ * 
+ * @author jorge.gutierrez
+ */
 @Repository
 public interface IGeolocationIp extends JpaRepository<GeolocationIp, IpId> {
    @Query(

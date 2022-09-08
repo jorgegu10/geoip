@@ -16,6 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
+/**
+ * Componente JobRunner que ejecuta el job de spring batch
+ * 
+ * @author jorge.gutierrez
+ */
 @Component
 public class JobRunner {
    private static final Logger logger = LoggerFactory.getLogger(JobRunner.class);

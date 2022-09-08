@@ -18,4 +18,14 @@ public class IpId implements Serializable {
 	@Column(name = "ip_to", insertable = false, updatable = false)
 	private long ipTo;
 
+	public IpId() {}
+	
+	public IpId(long ipFrom, long ipTo) {
+		super();
+		this.ipFrom = ipFrom;
+		this.ipTo = ipTo;
+	}
+	
+	
+
 }

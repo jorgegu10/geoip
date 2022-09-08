@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  db:
+    build: database
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+    
+  geoip:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: c-geoip
+    networks:
+      - mynetwork
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_SERVICE_HOST=db
+      - DB_NAME=geoip
+      - DB_PASSWD=admin
+      - DB_USER=postgres
+    depends_on:
+      - db
+
+
+networks:
+  mynetwork:
+    driver: bridge

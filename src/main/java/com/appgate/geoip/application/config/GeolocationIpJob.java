@@ -1,11 +1,7 @@
 package com.appgate.geoip.application.config;
 
-import com.appgate.geoip.domain.dto.GeolocationIpDTO;
-import com.appgate.geoip.domain.mapper.GeolocationIpFileRowMapper;
-import com.appgate.geoip.domain.model.GeolocationIp;
-import com.appgate.geoip.domain.service.GeolocationIpProcessor;
-import com.appgate.geoip.domain.service.GeolocationIpWriter;
 import javax.sql.DataSource;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -26,6 +22,18 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 
+import com.appgate.geoip.domain.dto.GeolocationIpDTO;
+import com.appgate.geoip.domain.mapper.GeolocationIpFileRowMapper;
+import com.appgate.geoip.domain.model.GeolocationIp;
+import com.appgate.geoip.domain.service.GeolocationIpProcessor;
+import com.appgate.geoip.domain.service.GeolocationIpWriter;
+
+/**
+ * Configuración de JOB Spring Batch
+ * 
+ * @author jorge.gutierrez
+ *
+ */
 @Configuration
 public class GeolocationIpJob {
 	private JobBuilderFactory jobBuilderFactory;

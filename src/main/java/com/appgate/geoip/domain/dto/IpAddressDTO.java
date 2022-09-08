@@ -17,6 +17,10 @@ public class IpAddressDTO {
       this.ipAddress = ipAddress;
    }
    
+   /**
+    * Método que valida si una IP es válida  en IPV4
+    * @return
+    */
 	public boolean isValidIpAddress() {
 		if(ipAddress.isPresent()) {
 			return PATTERN.matcher(ipAddress.get()).matches();
