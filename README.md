@@ -69,7 +69,10 @@ Como se trata de gran cantidad de registros almacenados en el archivo CSV, debem
 4. ¿Cuál sería para usted la forma correcta de exponer la operación de consulta de
 datos para una IP?
 
-TODO
+Para este escenario, se expone una api rest con el método GET donde recibe el parametro ipFilter.
+El servicio se encarga de validar si la IP es válida y emprende la busqueda en BD.
+
+En primera instancia la forma correcta de exponer la operación de consulta para una IP es separarla del componente que ejecuta el proceso de lectura de archivo e inserción a BD, para no mezclar la configuración del procesamiento batch con la de otras operaciones, es recomendable que todo el desarrollo del procesamiento con spring batch vaya en un nuevo proyecto/servicio.
 
 
 ## Ejecutar el proyecto
@@ -96,11 +99,11 @@ docker-compose up
 ### [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 En está URL se encontrará la documentación en formato swagger del API de Geolocation IP, donde encontraremos 3 métodos.
 
-Encontramos 2 operaciónes para procesar de archivo, uno sincrono y otro asincrono.
+Encontramos 2 operaciónes para procesar de archivo, uno sincrono y otro asincrono. Este procesará el archivo en lotes de 10000 registros y los irá almacenando en BD con varios hilos en ejecución.
 
 ![image](https://user-images.githubusercontent.com/32180242/189017073-b7a4c8e6-a7da-43eb-b426-285c09704213.png)
 
-Y la tercera operación de consulta por IP  
+Y la tercera operación de consulta por IP, se envía el parametro ipFilter y retornará los datos de ubicación de esa ip dada.
 
 ![image](https://user-images.githubusercontent.com/32180242/189017156-99bc5960-e83e-45d1-b682-9dbc5ecd4fde.png)
 
