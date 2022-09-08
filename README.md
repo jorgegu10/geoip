@@ -1,7 +1,7 @@
 # Geolocation Ip 
 Proyecto SpringBoot para leer un archivo csv con spring batch y almacenarlo en una BD Postgres
 - [![playversion](https://img.shields.io/badge/Springboot-2.7.3-brightgreen)](https://spring.io/projects/spring-boot) Spring Boot 2.7.3
-- [![mavenversion](https://img.shields.io/badge/Java-11-red)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) Programing language
+- [![mavenversion](https://img.shields.io/badge/Java-11-red)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) Java 11
 
 
 ## Proyecto
@@ -92,3 +92,15 @@ Para construir el ambiente en docker se deben ejecutar las siguientes líneas
 cd geoip
 docker-compose up
 ```
+## Probar la aplicación:
+### [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+En está URL se encontrará la documentación en formato swagger del API de Geolocation IP, donde encontraremos 3 métodos.
+
+Encontramos 2 operaciónes para procesar de archivo, uno sincrono y otro asincrono.
+
+![image](https://user-images.githubusercontent.com/32180242/189017073-b7a4c8e6-a7da-43eb-b426-285c09704213.png)
+
+Y la tercera operación de consulta por IP  
+
+![image](https://user-images.githubusercontent.com/32180242/189017156-99bc5960-e83e-45d1-b682-9dbc5ecd4fde.png)
+
